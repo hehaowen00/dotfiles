@@ -1,0 +1,308 @@
+{
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "security.workspace.trust.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "python.defaultInterpreterPath": "~/.pyenv/shims/python3",
+    "redhat.telemetry.enabled": false,
+    "jupyter.askForKernelRestart": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "rust-analyzer.diagnostics.enable": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "window.dialogStyle": "custom",
+    "window.titleBarStyle": "custom",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.a": "default",
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.startupEditor": "newUntitledFile",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "html.completion.attributeDefaultValue": "singlequotes",
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[svelte]": {
+        "editor.tabSize": 2,
+    },
+    "svelte.enable-ts-plugin": true,
+    "javascript.preferences.quoteStyle": "double",
+    "typescript.preferences.quoteStyle": "double",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "remote.restoreForwardedPorts": false,
+    "go.toolsManagement.autoUpdate": true,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "window.restoreWindows": "one",
+    "window.newWindowDimensions": "maximized",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "solid",
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.renderWhitespace": "none",
+    "editor.rulers": [
+        80
+    ],
+    "editor.cursorSurroundingLines": 16,
+    "editor.suggestSelection": "first",
+    "editor.fontFamily": "'JetbrainsMono Nerd Font Mono',Consolas, 'Courier New', monospace",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.localEchoStyle": "dim",
+    "workbench.statusBar.visible": true,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.closeEmptyGroups": true,
+    "vim.hlsearch": true,
+    "vim.leader": ";",
+    "vim.smartRelativeLine": true,
+    "vim.highlightedyank.enable": false,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.visualstar": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-k><C-o>"
+            ],
+            "commands": [
+                "workbench.action.files.openFolder"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "after": [
+                "<C-w>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.splitEditorDown"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.newGroupRight",
+                "workbench.action.files.newUntitledFile",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "y"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "J"
+            ],
+            "after": [
+                "m",
+                "z",
+                "J",
+                "`",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "Y"
+            ],
+            "after": [
+                "workbench.action.clipboardCopyAction"
+            ],
+        },
+        {
+            "before": [
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "k",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "y"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ],
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ],
+        }
+    ],
+    "editor.fontSize": 12.5,
+    "editor.lineNumbers": "relative",
+    "rust-analyzer.cargo.buildScripts.invocationStrategy": "once",
+    "rust-analyzer.hover.actions.references.enable": true,
+    "rust-analyzer.imports.granularity.group": "module",
+    "python.analysis.typeCheckingMode": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "kitty",
+    "terminal.external.osxExec": "kitty.app",
+    "debug.terminal.clearBeforeReusing": true,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.showTabs": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": "C:\\WINDOWS\\System32\\cmd.exe"
+        },
+        // "Windows Terminal": {
+        //     "path": "C:\\Users\\\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+        // },
+    },
+    // "terminal.external.windowsExec": "C:\\\\Users\\\\\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\wt.exe",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.sideBar.location": "right",
+    "editor.colorDecorators": false,
+    "css.format.enable": false,
+}
