@@ -14,9 +14,9 @@ ZSH_THEME="murilasso"
 zstyle ':omz:update' mode auto
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
-plugins=(colored-man-pages colorize copypath git rust ripgrep)
+plugins=(colored-man-pages colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,18 +27,21 @@ export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#  export EDITOR='nvim'
+# fi
 
 if [[ `uname` == "Darwin" ]] then
   alias ls="gls -v --color --group-directories-first"
 fi
 
-eval "$(pyenv init -)"
+if [[ `uname` == "Linux" ]] then
+  alias ls="ls -v --color --group-directories-first"
+fi
+
+# eval "$(pyenv init -)"
 
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
@@ -46,3 +49,9 @@ export GOROOT="/usr/local/go"
 
 export PATH="$GOPATH:$GOBIN:$GOROOT/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+. "$HOME/.cargo/env"
+
+unsetopt correct_all
+unsetopt correct
+
