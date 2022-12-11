@@ -5,7 +5,7 @@ local function map(mode, lhs, rhs, opts)
     options = vim.tbl_extend('force', options, opts)
   end
 
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = ';'
@@ -27,6 +27,9 @@ map('n', '<leader>k', '<C-w>k')
 map('n', '<leader>l', '<C-w>l')
 
 map('i', 'kk', '<Esc>')
-map('n', 'ff', ':lua TelescopeFiles()<CR>')
-map('n', 'fg', ':lua TelescopeGrep()<CR>')
+
+map('n', 'ff', TelescopeFiles)
+map('n', 'fg', TelescopeGrep)
+
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
+map('n', '<C-t>', ':NvimTreeClose<CR>')
