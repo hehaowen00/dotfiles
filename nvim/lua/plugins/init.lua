@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
   use 'navarasu/onedark.nvim'
 
   use 'numToStr/Comment.nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -39,7 +38,10 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   use 'neovim/nvim-lspconfig'
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   use 'ggandor/leap.nvim'
 
   use {

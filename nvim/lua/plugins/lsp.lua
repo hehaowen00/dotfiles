@@ -27,10 +27,6 @@ local function on_attach(client, bufnr)
     pattern = '*',
     callback = vim.lsp.buf.formatting_sync,
   })
-
-  vim.api.nvim_create_autocmd("CursorHold", {
-    callback = vim.diagnostic.open_float,
-  })
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
