@@ -44,8 +44,8 @@ fi
 # eval "$(pyenv init -)"
 
 export GOPATH="$HOME/go"
-export GOBIN="$HOME/go/bin"
-export GOROOT="/usr/local/go"
+export GOBIN="/usr/bin"
+export GOROOT="/usr/lib/go"
 
 export PATH="$GOPATH:$GOBIN:$GOROOT/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
