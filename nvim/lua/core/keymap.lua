@@ -26,10 +26,22 @@ map('n', '<leader>j', '<C-w>j')
 map('n', '<leader>k', '<C-w>k')
 map('n', '<leader>l', '<C-w>l')
 
+map('n', '<leader>t', ':tabnew<CR>')
+map('n', '<leader>1', '1gt')
+map('n', '<leader>2', '2gt')
+map('n', '<leader>3', '3gt')
+map('n', '<leader>4', '4gt')
+map('n', '<leader>5', '5gt')
+map('n', '<leader>6', '6gt')
+map('n', '<leader>7', '7gt')
+map('n', '<leader>8', '8gt')
+map('n', '<leader>9', '9gt')
+map('n', '<leader>0', '0gt')
+
 map('i', 'kk', '<Esc>')
 
 map('n', 'ff', TelescopeFiles)
 map('n', 'fg', TelescopeGrep)
 
-map('n', '<C-n>', ':NvimTreeToggle<CR>')
+map('n', '<leader>n', ':NvimTreeToggle<CR>')
 map('n', '<C-t>', ':NvimTreeClose<CR>')
