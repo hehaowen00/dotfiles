@@ -55,13 +55,6 @@ use {
 }
 
 use {
-  'nmac427/guess-indent.nvim',
-  config = function()
-    require('guess-indent').setup{}
-  end,
-}
-
-use {
   'nvim-treesitter/nvim-treesitter',
   run = function()
     local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -69,12 +62,22 @@ use {
   end,
 }
 
+use 'lukas-reineke/indent-blankline.nvim'
+
+use {
+  'nmac427/guess-indent.nvim',
+  config = function()
+    require('guess-indent').setup{}
+  end,
+}
+
 use {
   'hehaowen00/darkest-one',
   requires = { 'rktjmp/lush.nvim' }
 }
-use 'navarasu/onedark.nvim'
-use { "ellisonleao/gruvbox.nvim" }
+
+-- use 'navarasu/onedark.nvim'
+-- use { "ellisonleao/gruvbox.nvim" }
 end)
 
 require('plugins/lsp')
@@ -82,5 +85,6 @@ require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/treesitter')
+require('plugins/indent-line')
 require('plugins/comment')
 require('plugins/prettier')
