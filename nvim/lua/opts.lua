@@ -5,6 +5,7 @@ vim.cmd [[colorscheme darkest-one]]
 opt.cmdheight = 1
 opt.clipboard = 'unnamedplus'
 opt.colorcolumn = '80'
+opt.cursorline = true
 opt.hidden = false
 opt.hlsearch = true
 opt.incsearch = true
