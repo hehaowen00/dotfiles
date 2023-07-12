@@ -12,6 +12,11 @@ local function on_attach(client, bufnr)
   keymap("n", "<leader>a", vim.lsp.buf.code_action, opts)
   keymap("n", "<leader>d", vim.lsp.buf.signature_help, opts)
   keymap('n', '<leader>e', vim.diagnostic.open_float, opts)
+
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = "*",
+    command = "lua vim.lsp.buf.format()",
+  })
 end
 
 local cmp = require('cmp')
@@ -126,6 +131,7 @@ require'lspconfig'["tailwindcss"].setup{
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
 vim.diagnostic.config{
   virtual_text = false
 }

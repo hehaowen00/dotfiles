@@ -1,4 +1,5 @@
 local prettier = require'prettier'
+
 prettier.setup{
   bin = 'prettier',
   filetypes = {
@@ -32,6 +33,9 @@ local event = "BufWritePost"
 local async = event == "BufWritePost"
 
 null_ls.setup{
+	sources = {
+		require("null-ls").builtins.formatting.prettierd,
+	},
   on_attach = function(client, bufnr)
     vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
     vim.api.nvim_create_autocmd(event, {
