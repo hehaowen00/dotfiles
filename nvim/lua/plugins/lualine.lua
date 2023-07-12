@@ -40,3 +40,4 @@ require('lualine').setup({
     'nvim-tree'
   }
 })
+
