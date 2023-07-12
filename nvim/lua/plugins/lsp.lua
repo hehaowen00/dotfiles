@@ -39,8 +39,11 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping({
       i = function(fallback)
-        if cmp.visible() and cmp.get_active_entry() then
-          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+        if cmp.visible() then
+          local entry = cmp.get_selected_entry()
+          if entry then
+            cmp.confirm()
+          end
         else
           fallback()
         end
@@ -50,12 +53,7 @@ cmp.setup({
     }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-        if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-        else
-          cmp.confirm()
-        end
+        cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
       else
         fallback()
       end
@@ -113,6 +111,11 @@ require'lspconfig'.gopls.setup{
 }
 
 require'lspconfig'.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require'lspconfig'.svelte.setup{
   on_attach = on_attach,
   capabilities = capabilities,
 }

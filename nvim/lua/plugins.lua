@@ -29,6 +29,13 @@ use {
 }
 
 use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+
+use {
   'nmac427/guess-indent.nvim',
   config = function()
     require('guess-indent').setup{}
@@ -54,3 +61,4 @@ require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/treesitter')
+require('plugins/comment')
