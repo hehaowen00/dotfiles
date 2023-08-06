@@ -9,9 +9,9 @@ local function on_attach(client, bufnr)
   keymap("n", "gr", vim.lsp.buf.references, opts)
   keymap("n", "gl", vim.diagnostic.open_float, opts)
   keymap("n", "rn", vim.lsp.buf.rename, opts)
-  keymap("n", "<leader>a", vim.lsp.buf.code_action, opts)
-  keymap("n", "<leader>d", vim.lsp.buf.signature_help, opts)
-  keymap('n', '<leader>e', vim.diagnostic.open_float, opts)
+  keymap("n", "ga", vim.lsp.buf.code_action, opts)
+  keymap("n", "gh", vim.lsp.buf.signature_help, opts)
+  keymap('n', 'ge', vim.diagnostic.open_float, opts)
 
   vim.api.nvim_create_autocmd('BufWritePre', {
     pattern = "*",
