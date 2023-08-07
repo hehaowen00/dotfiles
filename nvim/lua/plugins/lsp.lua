@@ -4,14 +4,14 @@ local function on_attach(client, bufnr)
 
   keymap("n", "gD", vim.lsp.buf.declaration, opts)
   keymap("n", "gd", vim.lsp.buf.definition, opts)
-  keymap("n", "K", vim.lsp.buf.hover, opts)
+  keymap("n", "gh", vim.lsp.buf.hover, opts)
   keymap("n", "gI", vim.lsp.buf.implementation, opts)
   keymap("n", "gr", vim.lsp.buf.references, opts)
-  keymap("n", "gl", vim.diagnostic.open_float, opts)
   keymap("n", "rn", vim.lsp.buf.rename, opts)
   keymap("n", "ga", vim.lsp.buf.code_action, opts)
-  keymap("n", "gh", vim.lsp.buf.signature_help, opts)
+  keymap("n", "gs", vim.lsp.buf.signature_help, opts)
   keymap('n', 'ge', vim.diagnostic.open_float, opts)
+  keymap("n", "gl", vim.diagnostic.setqflist, opts)
 
   vim.api.nvim_create_autocmd('BufWritePre', {
     pattern = "*",
