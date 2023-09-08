@@ -1,11 +1,3 @@
-local function bind(mode, lhs, rhs, opts)
-    local options = { noremap = true, silent = true }
-    if opts then
-        opts = vim.tbl_extend('force', options, opts)
-    end
-    vim.keymap.set(mode, lhs, rhs, options)
-end
-
 vim.g.mapleader = ' '
 
 bind('', '<up>', '<nop>')
@@ -25,19 +17,14 @@ bind('n', '<leader>k', '<C-w>k')
 bind('n', '<leader>l', '<C-w>l')
 
 bind('n', '<leader>t', ':tabnew<CR>')
-bind('n', '1t', '1gt')
-bind('n', '2t', '2gt')
-bind('n', '3t', '3gt')
-bind('n', '4t', '4gt')
-bind('n', '5t', '5gt')
-bind('n', '6t', '6gt')
-bind('n', '7t', '7gt')
-bind('n', '8t', '8gt')
-bind('n', '9t', '9gt')
-bind('n', '0t', '0gt')
+bind('n', 'ta', '1gt')
+bind('n', 'ts', '2gt')
+bind('n', 'td', '3gt')
+bind('n', 'tf', '4gt')
+bind('n', 'tg', '5gt')
+bind('n', 'th', '6gt')
+bind('n', 'tj', '7gt')
+bind('n', 'tk', '8gt')
+bind('n', 'tl', '9gt')
+bind('n', 't;', '0gt')
 
-bind('n', '<leader>n', ':NvimTreeToggle<CR>')
-bind('n', '<leader>c', ':NvimTreeClose<CR>')
-
-bind('n', 'ff', TelescopeFiles)
-bind('n', 'fg', require('telescope.builtin').live_grep)

@@ -23,3 +23,5 @@ function TelescopeFiles()
   }
 end
 
+bind('n', 'ff', TelescopeFiles)
+bind('n', 'fg', require('telescope.builtin').live_grep)

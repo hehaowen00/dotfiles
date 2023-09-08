@@ -1,7 +1,5 @@
 local opt = vim.opt
 
-vim.cmd [[colorscheme onedark]]
-
 opt.cmdheight = 1
 opt.clipboard = 'unnamedplus'
 opt.colorcolumn = '80'
