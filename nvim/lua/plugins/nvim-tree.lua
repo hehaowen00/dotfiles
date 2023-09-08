@@ -5,6 +5,10 @@ local HEIGHT_RATIO = 0.6  -- You can change this
 local WIDTH_RATIO = 0.4
 
 require('nvim-tree').setup({
+  update_focused_file = {
+    enable = true,
+    update_root = true,
+  },
   renderer = {
     highlight_git = false,
     indent_width = 4,
@@ -16,7 +20,7 @@ require('nvim-tree').setup({
   },
   view = {
     side = 'right',
-    width = 40,
+    width = 30,
     -- float = {
     --   enable = true,
     --   open_win_config = function()
