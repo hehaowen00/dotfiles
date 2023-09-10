@@ -20,7 +20,43 @@ require("lazy").setup({
 'hrsh7th/cmp-path',
 'hrsh7th/nvim-cmp',
 'L3MON4D3/LuaSnip',
-"williamboman/mason.nvim",
+'williamboman/mason.nvim',
+{
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  build = ":Copilot auth",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({
+      panel = {
+        enabled = false,
+        auto_refresh = false,
+      },
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        accept = false, -- disable built-in keymapping
+        debounce = 75,
+        keymap = {
+          accept = "<C-l>",
+          accept_word = false,
+          accept_line = false,
+          next = "<C-]>",
+          prev = "<C-[>",
+          dismiss = "<C-]>",
+        },
+      },
+      filetypes = {
+        yaml = false,
+        markdown = false,
+        help = false,
+        gitcommit = false,
+        gitrebase = false,
+        ["."] = false,
+      }
+    })
+  end,
+},
 {
   'nvim-treesitter/nvim-treesitter',
   config = function()
@@ -68,3 +104,4 @@ require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/treesitter')
 require('plugins/onedark')
+

@@ -5,11 +5,12 @@ bind('', '<down>', '<nop>')
 bind('', '<left>', '<nop>')
 bind('', '<right>', '<nop>')
 
+bind('i', '<C-c>',  '<Esc>')
+bind('i', 'kk', '<Esc>')
+
 bind('n', '<leader>s', '<C-w>s')
 bind('n', '<leader>v', '<C-w>v')
 bind('n', '<leader>q', ':q<CR>')
-
-bind('i', 'kk', '<Esc>')
 
 bind('n', '<leader>h', '<C-w>h')
 bind('n', '<leader>j', '<C-w>j')
