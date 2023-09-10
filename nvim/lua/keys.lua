@@ -4,7 +4,6 @@ bind('', '<up>', '<nop>')
 bind('', '<down>', '<nop>')
 bind('', '<left>', '<nop>')
 bind('', '<right>', '<nop>')
-
 bind('i', '<C-c>',  '<Esc>')
 bind('i', 'kk', '<Esc>')
 
@@ -29,3 +28,5 @@ bind('n', 'tk', '8gt')
 bind('n', 'tl', '9gt')
 bind('n', 't;', '0gt')
 
+bind('v', 'x', '"_d')
+bind('n', 'xx', '"_dd')
