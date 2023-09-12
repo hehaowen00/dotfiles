@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "hehaowen00"
-      user-mail-address "john@doe.com")
+;; (setq user-full-name "John Doe"
+;;       user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -42,6 +42,15 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(setq confirm-kill-emacs nil)
+(setq display-fill-column-indicator 't)
+(setq fill-column 80)
+(setq scroll-margin 16)
+
+(setq evil-split-window-below 't)
+(setq evil-vsplit-window-right 't)
+
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -73,14 +82,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-(global-display-fill-column-indicator-mode 't)
-
-(setq doom-font
-      (font-spec :family "JetBrains Mono" :size 14 :weight 'medium))
-
-(setq evil-split-window-below 't)
-(setq evil-vsplit-window-right 't)
-
-(setq fill-column 80)
-(setq scroll-margin 16)
+(after! doom-themes
+  ;; (setq display-fill-column-indicator-character ?\u2502)
+  ;; (setq-default display-fill-column-indicator-character ?\u2502)
+  (add-hook 'window-setup-hook #'toggle-frame-maximized)
+  (setq display-fill-column-indicator-column 80)
+  (setq display-fill-column-indicator-where t)
+  (setq-default tab-width nil)
+  (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode))
