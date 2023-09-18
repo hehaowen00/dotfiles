@@ -12,6 +12,11 @@ autocmd('BufWritePre', {
   command = '%s/\\s\\+$//e',
 })
 
+autocmd('BufWritePost', {
+  pattern = "*",
+  command = ":FormatLock",
+})
+
 autocmd('BufEnter', {
   pattern = '*',
   command = 'set fo-=c fo-=r fo-=o'

@@ -28,5 +28,32 @@ bind('n', 'tk', '8gt')
 bind('n', 'tl', '9gt')
 bind('n', 't;', '0gt')
 
-bind('v', 'x', '"_d')
-bind('n', 'xx', '"_dd')
+bind('v', 'xc', '"_d')
+bind('n', 'xl', '"_dd')
+bind('n', 'dl', 'dd')
+
+function delete_surround()
+  local api = vim.api
+  local win = api.nvim_get_current_win()
+  local r, c = unpack(api.nvim_win_get_cursor(win))
+  local line = api.nvim_get_current_line()
+  c = c + 1
+  local char = string.sub(line, c, c)
+
+  local valid_chars = {
+    ['('] = true,
+    [')'] = true,
+    ['['] = true,
+    [']'] = true,
+    ['{'] = true,
+    ['}'] = true,
+    ['"'] = true,
+    ["'"] = true,
+  }
+
+  if valid_chars[char] then
+    api.nvim_feedkeys('yi' ..char ..'va' .. char .. 'p', 'n', true)
+  end
+end
+
+bind('n', 'ds', '<cmd>lua delete_surround()<CR>')

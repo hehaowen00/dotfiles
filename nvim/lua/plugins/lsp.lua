@@ -12,11 +12,6 @@ local function on_attach(client, bufnr)
   keymap("n", "gs", vim.lsp.buf.signature_help, opts)
   keymap('n', 'ge', vim.diagnostic.open_float, opts)
   keymap("n", "gl", vim.diagnostic.setqflist, opts)
-
-  vim.api.nvim_create_autocmd('BufWritePre', {
-    pattern = "*",
-    command = "lua vim.lsp.buf.format()",
-  })
 end
 
 local cmp = require('cmp')
@@ -126,7 +121,14 @@ require'lspconfig'.svelte.setup{
   capabilities = capabilities,
 }
 
-require'lspconfig'["tailwindcss"].setup{
+require'lspconfig'.tailwindcss.setup{
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'svelte',
+  },
   on_attach = on_attach,
   capabilities = capabilities,
 }

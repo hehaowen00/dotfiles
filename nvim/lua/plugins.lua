@@ -6,7 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -21,6 +21,7 @@ require("lazy").setup({
 'hrsh7th/nvim-cmp',
 'L3MON4D3/LuaSnip',
 'williamboman/mason.nvim',
+'mhartington/formatter.nvim',
 -- {
 --   "zbirenbaum/copilot.lua",
 --   cmd = "Copilot",
@@ -98,10 +99,10 @@ require("lazy").setup({
 "navarasu/onedark.nvim"
 })
 
+require('plugins/formatter')
 require('plugins/lsp')
+require('plugins/treesitter')
 require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
-require('plugins/treesitter')
 require('plugins/onedark')
-

@@ -5,9 +5,10 @@ local HEIGHT_RATIO = 0.6  -- You can change this
 local WIDTH_RATIO = 0.4
 
 require('nvim-tree').setup({
+  highlight_focused_file = true,
   update_focused_file = {
     enable = true,
-    update_root = true,
+    update_root = false,
   },
   renderer = {
     highlight_git = false,
@@ -26,4 +27,3 @@ require('nvim-tree').setup({
 
 bind('n', '<leader>n', ':NvimTreeToggle<CR>')
 bind('n', '<leader>c', ':NvimTreeClose<CR>')
-
