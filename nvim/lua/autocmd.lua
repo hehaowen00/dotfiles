@@ -7,14 +7,14 @@ autocmd('TextYankPost', {
   end
 })
 
-autocmd('BufWritePre', {
-  pattern = '*',
-  command = '%s/\\s\\+$//e',
-})
+-- autocmd('BufWritePre', {
+--   pattern = '*',
+--   command = '%s/\\s\\+$//e',
+-- })
 
 autocmd('BufWritePost', {
   pattern = "*",
-  command = ":FormatLock",
+  command = ":FormatWrite",
 })
 
 autocmd('BufEnter', {

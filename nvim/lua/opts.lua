@@ -18,6 +18,7 @@ opt.smartcase = true
 opt.splitright = true
 opt.splitbelow = true
 opt.swapfile = false
+opt.undofile = false
 opt.synmaxcol = 256
 opt.termguicolors = true
 opt.wrap = false
@@ -28,4 +29,3 @@ opt.shiftwidth = 4
 opt.smartindent = true
 opt.softtabstop = 4
 opt.tabstop = 4
-

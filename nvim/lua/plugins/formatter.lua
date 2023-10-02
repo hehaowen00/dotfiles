@@ -7,6 +7,7 @@ require("formatter").setup {
     go = {
       require("formatter.filetypes.go").goimports,
       require("formatter.filetypes.go").gofmt,
+      -- require("formatter.filetypes.go").golines,
     },
     rust = {
       require("formatter.filetypes.rust").rustfmt,
@@ -24,7 +25,21 @@ require("formatter").setup {
       require("formatter.filetypes.typescriptreact").prettier,
     },
     svelte = {
-      require("formatter.filetypes.svelte").prettier,
+      function()
+        return {
+          exe = "npx",
+          args = {
+            "prettier",
+            "--plugin",
+            "prettier-plugin-svelte",
+            "--bracket-same-line",
+            "--stdin-filepath",
+            util.escape_path(util.get_current_buffer_file_path()),
+          },
+          stdin = true,
+          try_node_modules = true
+        }
+      end,
     },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace

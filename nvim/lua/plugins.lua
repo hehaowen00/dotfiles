@@ -96,7 +96,11 @@ require("lazy").setup({
       require('Comment').setup()
   end
 },
-"navarasu/onedark.nvim"
+-- "navarasu/onedark.nvim"
+{
+  "olimorris/onedarkpro.nvim",
+  priority = 1000 -- Ensure it loads first
+}
 })
 
 require('plugins/formatter')
