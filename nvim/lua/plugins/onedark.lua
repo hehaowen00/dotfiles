@@ -1,7 +1,7 @@
--- require('onedark').setup {
---   style = 'darker'
--- }
---
--- require('onedark').load()
+require('onedark').setup {
+  style = 'darker'
+}
 
-vim.cmd('colorscheme onedark')
+require('onedark').load()
+
+-- vim.cmd('colorscheme onedark')
