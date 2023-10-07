@@ -1,0 +1,10 @@
+theme = "onedarker"
+
+[editor]
+line-number = "relative"
+scrolloff = 16
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "underline"
