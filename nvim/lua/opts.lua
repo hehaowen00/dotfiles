@@ -22,6 +22,7 @@ opt.undofile = false
 opt.synmaxcol = 256
 opt.termguicolors = true
 opt.wrap = false
+opt.laststatus = 0
 
 -- indentation
 opt.expandtab = true

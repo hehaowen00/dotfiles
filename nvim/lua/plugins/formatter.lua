@@ -16,7 +16,7 @@ require("formatter").setup {
       require("formatter.filetypes.javascript").prettier,
     },
     javascriptreact = {
-      require("formatter.filetypes.javascriptreact").prettier,
+      require("formatter.filetypes.javascript").prettier,
     },
     typescript = {
       require("formatter.filetypes.typescript").prettier,

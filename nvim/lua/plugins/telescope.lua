@@ -24,4 +24,5 @@ function TelescopeFiles()
 end
 
 bind('n', 'ff', TelescopeFiles)
-bind('n', 'fg', require('telescope.builtin').live_grep)
+bind('n', '<leader>g', require('telescope.builtin').live_grep)
+bind('n', '<leader>f', require('telescope.builtin').current_buffer_fuzzy_find)

@@ -15,49 +15,24 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 'neovim/nvim-lspconfig',
-'hrsh7th/cmp-nvim-lsp',
-'hrsh7th/cmp-buffer',
-'hrsh7th/cmp-path',
-'hrsh7th/nvim-cmp',
-'L3MON4D3/LuaSnip',
-'williamboman/mason.nvim',
+{
+  'echasnovski/mini.completion',
+  version = '*',
+  config = function()
+    require('mini.completion').setup()
+  end
+},
+{
+  'williamboman/mason.nvim',
+  config = function()
+    require('mason').setup()
+  end
+},
 'mhartington/formatter.nvim',
--- {
---   "zbirenbaum/copilot.lua",
---   cmd = "Copilot",
---   build = ":Copilot auth",
---   event = "InsertEnter",
---   config = function()
---     require("copilot").setup({
---       panel = {
---         enabled = false,
---         auto_refresh = false,
---       },
---       suggestion = {
---         enabled = true,
---         auto_trigger = true,
---         accept = false, -- disable built-in keymapping
---         debounce = 75,
---         keymap = {
---           accept = "<C-l>",
---           accept_word = false,
---           accept_line = false,
---           next = "<C-]>",
---           prev = "<C-[>",
---           dismiss = "<C-]>",
---         },
---       },
---       filetypes = {
---         yaml = false,
---         markdown = false,
---         help = false,
---         gitcommit = false,
---         gitrebase = false,
---         ["."] = false,
---       }
---     })
---   end,
--- },
+{
+  'Exafunction/codeium.vim',
+  event = 'BufEnter'
+},
 {
   'nvim-treesitter/nvim-treesitter',
   config = function()
@@ -72,16 +47,9 @@ require("lazy").setup({
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("nvim-tree").setup {}
-  end,
 },
 {
-  'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' }
-},
-{
-  'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  'nvim-telescope/telescope.nvim',
   dependencies = { 'nvim-lua/plenary.nvim' }
 },
 {
@@ -97,16 +65,11 @@ require("lazy").setup({
   end
 },
 "navarasu/onedark.nvim"
--- {
---   "olimorris/onedarkpro.nvim",
---   priority = 1000 -- Ensure it loads first
--- }
 })
 
 require('plugins/formatter')
 require('plugins/lsp')
 require('plugins/treesitter')
-require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/onedark')
