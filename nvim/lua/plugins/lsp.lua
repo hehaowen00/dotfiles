@@ -37,6 +37,10 @@ require'lspconfig'.tailwindcss.setup{
   on_attach = on_attach,
 }
 
+require'lspconfig'.bufls.setup{
+  on_attach = on_attach,
+}
+
 vim.diagnostic.config{
   virtual_text = false
 }

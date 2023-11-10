@@ -57,4 +57,4 @@ function delete_surround()
 end
 
 bind('n', 'ds', '<cmd>lua delete_surround()<CR>')
-bind('n', '<CR>', '<cmd> pumvisible() ? "<C-y>" : "<CR>"', { expr = true })
+-- bind('n', '<CR>', '<cmd> pumvisible() ? "<C-y>" : "<CR>"', { expr = true })

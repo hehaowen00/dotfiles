@@ -9,6 +9,9 @@ opt.hlsearch = true
 opt.incsearch = true
 opt.laststatus = 2
 opt.lazyredraw = true
+opt.list = true
+opt.listchars = { space = ' ', tab = '  ' }
+opt.mouse = 'a'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 16
