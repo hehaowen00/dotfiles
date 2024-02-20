@@ -26,13 +26,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#  export EDITOR='nvim'
-# fi
-
 if [[ `uname` == "Darwin" ]] then
   alias ls="gls -v --color --group-directories-first"
 fi
@@ -44,14 +37,23 @@ fi
 # eval "$(pyenv init -)"
 
 export GOPATH="$HOME/go"
-export GOBIN="/usr/bin"
-export GOROOT="/usr/lib/go"
+export GOBIN="$HOME/go/bin"
+export GOROOT="$(brew --prefix golang)/libexec"
 
 export PATH="$GOPATH:$GOBIN:$GOROOT/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-. "$HOME/.cargo/env"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 unsetopt correct_all
 unsetopt correct
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="/usr/local/Cellar/openjdk@17/17.0.7/bin:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+export PATH="$(brew --prefix openjdk@17)/bin:$PATH"
+export PATH="$NVM_BIN:$PATH"
+export OPENCV_INCLUDE_DIR="/opt/homebrew/Cellar/opencv/4.8.0_5/include"
+export OPENCV_LIB_DIR="/opt/homebrew/Cellar/opencv/4.8.0_5/lib"

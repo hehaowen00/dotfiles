@@ -26,18 +26,22 @@ require'lspconfig'.svelte.setup{
   on_attach = on_attach,
 }
 
-require'lspconfig'.tailwindcss.setup{
-  filetypes = {
-    'javascript',
-    'javascriptreact',
-    'typescript',
-    'typescriptreact',
-    'svelte',
-  },
+-- require'lspconfig'.tailwindcss.setup{
+--   filetypes = {
+--     'javascript',
+--     'javascriptreact',
+--     'typescript',
+--     'typescriptreact',
+--     'svelte',
+--   },
+--   on_attach = on_attach,
+-- }
+
+require'lspconfig'.bufls.setup{
   on_attach = on_attach,
 }
 
-require'lspconfig'.bufls.setup{
+require'lspconfig'.rust_analyzer.setup{
   on_attach = on_attach,
 }
 

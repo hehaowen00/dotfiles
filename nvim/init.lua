@@ -10,5 +10,4 @@ require('autocmd')
 require('keys')
 require('opts')
 require('plugins')
-
-vim.opt.mouse=''
+require('neovide')

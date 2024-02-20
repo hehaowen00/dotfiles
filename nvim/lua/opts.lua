@@ -25,7 +25,8 @@ opt.undofile = false
 opt.synmaxcol = 256
 opt.termguicolors = true
 opt.wrap = false
-opt.laststatus = 0
+opt.sidescrolloff = 16
+vim.opt.mouse=''
 
 -- indentation
 opt.expandtab = true
