@@ -39,6 +39,7 @@
 (package-initialize)
 
 (setq package-list '(atom-one-dark-theme
+                     doom-modeline
                      doom-themes
                      evil
                      evil-collection
@@ -229,3 +230,13 @@
   :ensure t
   :config
   (load-theme 'doom-one t))
+
+(use-package doom-modeline
+  :ensure t
+  :init
+  (doom-modeline-mode 1)
+  :custom
+  (doom-modeline-height 24)
+  (doom-modeline-icon t)
+  (doom-modeline-vcs t)
+  (doom-modeline-buffer-encoding t))
